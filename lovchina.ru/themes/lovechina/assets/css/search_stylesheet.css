@@ -1,0 +1,711 @@
+/* CSS for embedded TaoJet search */
+
+
+.taojet_category_box{
+  margin: 2px 3px;
+}
+
+div.taojet_search_box{
+  width: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  margin: 20px auto;
+}
+
+div.taojet_search_box a{
+    color: #3E4346;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+	font-size: 10pt;
+}
+
+div.taojet_search_box .taojet_btn_search {
+    /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7eb4e6), color-stop(1, #2281d8) );
+    background:-moz-linear-gradient( center top, #7eb4e6 5%, #2281d8 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7eb4e6', endColorstr='#2281d8');
+    background-color:#7eb4e6;*/
+    background: #EA556F;
+    color: #E5EDF4;
+    font-family: 'calibrib';
+    border-radius:6px;
+    /*border:1px solid #74b807;*/
+    display:inline-block;
+    /*color:#ffffff;
+    font-family:arial;*/
+    /*font-size:10pt;
+    font-weight:bold;*/
+    padding:4px 15px;
+    text-decoration:none;
+    /*text-shadow:1px 1px 0px #528009;*/
+}
+
+div.taojet_search_box .taojet_btn_search:hover {
+    /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2281d8), color-stop(1, #7eb4e6) );
+    background:-moz-linear-gradient( center top, #2281d8 5%, #7eb4e6 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2281d8', endColorstr='#7eb4e6');
+    background-color:#2281d8;*/
+}
+
+div.taojet_search_box .taojet_btn_search:active {
+    position:relative;
+    top:1px;
+}
+
+div.taojet_search_box input{
+  border:1px solid #aaa;
+  border-radius:3px;
+  transition:border linear .2s,box-shadow linear .2s;
+  margin-right: 5px;
+  color: #6b676b;
+  padding-left: 5px;
+}
+
+div.taojet_search_box input:focus{
+  outline:none;
+  border-color:rgba(120, 170, 255, .75);
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  box-shadow:0 0 8px rgba(120, 170, 255, 5);
+}
+
+
+div.taojet_search_box input.taojet_query_text{
+  border-radius:6px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  transition:border linear .2s,box-shadow linear .2s;
+  -moz-transition:border linear .2s,-moz-box-shadow linear .2s;
+  -webkit-transition:border linear .2s,-webkit-box-shadow linear .2s;
+  height: 20px;
+  width: 200px;
+  font-size: 10pt;
+}
+
+div.taojet_search_box .tj_top_link{
+  display: block;
+  width: 120px;
+  border-bottom: none;
+  background-repeat: no-repeat;
+  padding: 0;
+  height: 15px;
+}
+
+div.taojet_search_box .tj_top_link:hover{
+  color:rgb(137, 196, 3);
+}
+
+div.taojet_search_box .tj_by_photo_search_link{
+  /*background-image: url("camera.png");*/
+	margin: 0 0 2px 3px;
+}
+
+div.taojet_search_box .tj_by_text_search_link{
+  background-image: url("text.png");
+}
+
+
+div.taojet_search_box .taojet_show_params{
+  width: 100px;
+  margin-left: 3px;
+  margin-top: -2px;
+  position: relative;
+  display: none;
+}
+
+div.taojet_search_box div.taojet_btn_close{
+  background-image: url("/assets/close.png");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+div.taojet_search_box #taojet_search_params input{
+    width: 40px;
+}
+
+div.taojet_search_box input#taojet_on_sale{
+    width: 15px;
+}
+
+div.taojet_search_box #taojet_search_params{
+    display: none;
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    width: 250px;
+    padding: 12px;
+    padding-bottom: 5px;
+    border-radius:3px;
+    z-index: 99999999999;
+    background-color: white;
+}
+
+div.taojet_search_box .taojet_prices_params{
+  margin: 8px;
+}
+
+div.taojet_search_box .taojet_user_block{
+  position: relative;
+  left: 50px;
+  top: -16px;
+  display: none;
+}
+
+div.taojet_search_box #taojet_lightbox {
+    display: none;
+    position:fixed;
+    background:white;
+    z-index:99999999999;
+    padding:10px;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    border-radius:6px;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+div.taojet_search_box #taojet_lightbox.taojet_queries_info{
+  max-width: 500px;
+  left: 25%;
+}
+
+#taojet_dimmer {
+    background: black;
+    position: fixed;
+    opacity: .2;
+    top: 0;
+    z-index:9999999;
+    width: 100%;
+    height: 100%;
+}
+
+#taojet_dimmer.invisible{
+    opacity: 0;
+}
+
+div.taojet_search_box #taojet_categories, #taojet_queries_info {
+    display: none;
+}
+
+div.taojet_search_box #queries_info {
+    padding:8px;
+}
+
+div.taojet_search_box #taojet_queries_info ul.taojet_tabs {
+    margin:0px;
+    padding:0px;
+    padding-left: 10px;
+    margin-top:5px;
+    margin-bottom:6px;
+}
+div.taojet_search_box #taojet_queries_info ul.taojet_tabs li {
+    list-style:none;
+    display:inline;
+}
+
+div.taojet_search_box #taojet_queries_info ul.taojet_tabs li a {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #2281d8) );
+    background:-moz-linear-gradient( center top, #89c403 5%, #2281d8 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#2281d8');
+    background-color:#89c403;
+    border-radius:6px;
+    border:1px solid #74b807;
+    display:inline-block;
+    color:#ffffff;
+    font-family:arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:4px 18px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #528009;
+}
+
+div.taojet_search_box #taojet_queries_info ul.taojet_tabs li a:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2281d8), color-stop(1, #89c403) );
+    background:-moz-linear-gradient( center top, #2281d8 5%, #89c403 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2281d8', endColorstr='#89c403');
+    background-color:#2281d8;
+}
+div.taojet_search_box #taojet_queries_info ul.taojet_tabs li a.active {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #587a0a), color-stop(1, #89c403) );
+    background:-moz-linear-gradient( center top, #587a0a 5%, #89c403 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#587a0a', endColorstr='#89c403');
+    background-color:#587a0a;
+}
+
+div.taojet_search_box #taojet_queries_info .taojet_content {
+
+}
+
+div.taojet_search_box #taojet_queries_history_content { display:none; }
+
+div.taojet_search_box #taojet_queries_info .taojet_content ul {
+    margin:0px;
+    padding:0px 0px 0px 0px;
+}
+div.taojet_search_box #taojet_queries_info .taojet_content ul li {
+    list-style:none;
+    border-bottom:1px solid #d6dde0;
+    padding-top:12px;
+    padding-bottom:10px;
+    font-size:15px;
+    padding: 10px;
+}
+
+div.taojet_search_box #taojet_queries_info .taojet_content ul li:hover {
+  background-color: #e2e5f0;
+}
+
+div.taojet_search_box #taojet_queries_info .taojet_content ul li a {
+    text-decoration:none;
+    color:#3e4346;
+}
+div.taojet_search_box #taojet_queries_info .taojet_content ul li small {
+    color:#8b959c;
+    font-size:12px;
+    position:relative;
+    left:4px;
+    top:0px;
+    float: right;
+}
+div.taojet_search_box #taojet_queries_info .taojet_content ul li:last-child {
+    border-bottom:none;
+}
+
+div.taojet_search_box .taojet_it_counter{
+  background-color: #89c403;
+  margin-right: 10px;
+  border-radius:50px;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size:10px;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+  -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+div.taojet_search_box .autocomplete {
+    position: absolute;
+    visibility: hidden;
+    width: 440px;
+    color: #6b676b;
+    background-color: white;
+    z-index: 9999999999999999;
+
+}
+
+div.taojet_search_box .autocomplete ul {
+    padding: 0;
+    margin: 0;
+}
+
+div.taojet_search_box .autocomplete li {
+    display: block;
+    cursor: pointer;
+    margin: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div.taojet_search_box .autocomplete li.selected {
+    background-color: #e2e5f0;
+}
+
+div.taojet_search_box #taojet_pagination a{
+    color: #3E4346;
+    text-decoration: none;
+    border-bottom: none;
+    font-size:15px;
+}
+
+div.taojet_search_box #taojet_pagination a.active{
+  color: #89c403;
+  font-size:20px;
+}
+
+div.taojet_search_box .tjnfo{
+  margin-left: 20px;
+  margin-top: 0px;
+  display: inline;
+  float: right;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+div.taojet_search_box .autocomplete .tjnfo{
+  position: relative;
+}
+
+div.taojet_search_box .autocomplete div.tjnfo{
+  width: auto;
+  margin-top: -8px;
+}
+
+
+div.taojet_search_box .tjnfo a{
+  font-size: 12px;
+  color: #adadb3;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+div.taojet_search_box ul#taojet_categories{
+  list-style: none;
+  padding-left: 5px;
+}
+
+div.taojet_search_box ul#taojet_categories li{
+  padding-top: 20px;
+  float: left;
+  padding-left: 20px;
+
+}
+
+div.taojet_search_box ul.taojet_subcategories{
+  list-style: none;
+  padding-left: 0px;
+  width: 250px;
+}
+
+div.taojet_search_box ul#taojet_categories.tjs_multilevel_catalog li{
+
+}
+
+div.taojet_search_box ul#taojet_categories li div.tj_sub_list{
+  float:left;
+}
+
+div.taojet_search_box ul.tjs_multilevel_catalog ul.taojet_subcategories{
+  width: 100%;
+}
+
+div.taojet_search_box div.tj_sub_list{
+  width: 260px;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+div.taojet_search_box ul#taojet_categories ul.taojet_subcategories li{
+  padding-top: 5px;
+  font-size: 12px;
+  padding-left: 0px;
+  padding-right: 10px;
+  float: none;
+  display: inline;
+}
+
+div.taojet_search_box ul#taojet_categories.tjs_multilevel_catalog ul.taojet_subcategories li{
+  float: left;
+}
+
+div.taojet_search_box ul#taojet_categories li.all_taobao_categories{
+  float: none;
+}
+
+div.taojet_search_box li.tj_sub_header span{
+  color:red;
+  font-size:15px;
+}
+
+div#taojet_image_search, #taojet_image_params, #taojet_image_error, #taojet_form_local_image{
+    display: none;
+}
+
+/*
+ * Original version: 1.0 © 2010 Andrew Valums ( andrew(at)valums.com )
+ * Current Maintainer (2.0+): 2012, Ray Nicholus ( fineuploader(at)garstasio.com )
+ *
+ * Licensed under MIT license, GNU GPL 2 or later, GNU LGPL 2 or later, see license.txt.
+ */
+.qq-uploader {
+    position: relative;
+    width: 100%;
+}
+.qq-upload-button {
+    display: block;
+    /*or inline-block*/
+    width: 440px;
+    padding: 7px 0;
+    text-align: center;
+    border: 2px dashed #CFD7EF;
+    color: gray;
+}
+.qq-upload-button-hover {
+    background: #EAEAEA;
+}
+.qq-upload-button-focus {
+    outline: 1px dotted #000000;
+}
+.qq-upload-drop-area, .qq-upload-extra-drop-area {
+    position: absolute;
+    top: -14px;
+    left: 0;
+    width: 445px;
+    height: 40px;
+    z-index: 2;
+    background: rgb(137, 196, 3);
+    text-align: center;
+}
+.qq-upload-drop-area span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -8px;
+    font-size: 16px;
+}
+.qq-upload-extra-drop-area {
+    position: relative;
+    margin-top: 50px;
+    font-size: 16px;
+    padding-top: 30px;
+    height: 20px;
+    min-height: 40px;
+}
+.qq-upload-drop-area-active {
+    background: rgb(150, 160, 3);
+}
+.qq-upload-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 440px;
+}
+.qq-upload-list li {
+    margin: 0;
+    padding: 9px;
+    line-height: 15px;
+    font-size: 16px;
+}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-retry, .qq-upload-failed-text, .qq-upload-finished {
+    margin-right: 12px;
+}
+.qq-upload-file {
+    color: gray;
+}
+.qq-upload-status-text{
+  color: gray;
+}
+.qq-upload-spinner {
+    display: inline-block;
+    background: url("/images/ajax-loader.gif");
+    width: 220px;
+    height: 10px;
+    vertical-align: text-bottom;
+}
+.qq-upload-finished {
+    display:none;
+    width:15px;
+    height:15px;
+    vertical-align:text-bottom;
+}
+.qq-upload-retry {
+    display: none;
+    color: #000000;
+}
+.qq-upload-cancel {
+    color: #000000;
+}
+.qq-upload-retryable .qq-upload-retry {
+    display: inline;
+}
+.qq-upload-size, .qq-upload-cancel, .qq-upload-retry {
+    font-size: 12px;
+    font-weight: normal;
+    color: gray;
+}
+.qq-upload-failed-text {
+    display: none;
+    font-style: italic;
+    font-weight: bold;
+}
+.qq-upload-failed-icon {
+    display:none;
+    width:15px;
+    height:15px;
+    vertical-align:text-bottom;
+}
+.qq-upload-fail .qq-upload-failed-text {
+    display: inline;
+}
+.qq-upload-retrying .qq-upload-failed-text {
+    display: inline;
+    color: #D60000;
+}
+.qq-upload-list li.qq-upload-success {
+    background-color: #5DA30C;
+    color: #FFFFFF;
+}
+.qq-upload-list li.qq-upload-fail {
+    background-color: #D60000;
+    color: #FFFFFF;
+}
+.qq-progress-bar {
+    background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+    width: 0%;
+    height: 15px;
+    border-radius: 6px;
+    margin-bottom: 3px;
+    display: none;
+}
+
+#taojet_ajax_loading {
+    display: none;
+}
+
+.taojet_image_params .tj_uploaded_img{
+  max-width: 150px;
+}
+
+.tj_left_panel{
+  float: left;
+  width: 200px;
+  height: 250px;
+}
+
+.taojet_products_results{
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  -moz-column-count:auto;
+  -moz-column-width: 230px;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -webkit-column-count:auto;
+  -webkit-column-width: 230px;
+  column-gap: 15px;
+  column-fill: auto;
+  column-count: auto;
+  column-width: 230px;
+}
+
+.tj_search_photo_item{
+  margin: 20px;
+  font-size: 22px;
+  color: #5B5B5B;
+  text-align: center;
+  background-color: white;
+  width: 210px;
+  min-height: 220px;
+}
+
+.tj_search_photo_item span{
+  color: #F50101;
+}
+
+.tj_same_product{
+  color: #5B5B5B;
+}
+
+.tj_same_product span{
+  color: #F50101;
+}
+
+.tj_search_photo_item img{
+  max-width: 220px;
+  box-shadow:0 0 8px gray;
+}
+
+.tj_results_pages{
+  padding:3px;
+  margin:3px;
+  margin-bottom: 40px;
+}
+
+.tj_results_pages a{
+  padding: 2px 5px 2px 5px;
+  margin-right: 2px;
+  border: 1px solid rgb(221, 221, 221);
+  text-decoration: none;
+  color: rgb(137, 196, 3);
+}
+
+.tj_results_pages a:hover, .tj_results_pages a:active{
+  border:1px solid #85BD1E;
+  color: #638425;
+  background-color: #F1FFD6;
+}
+
+.tj_results_pages a.active{
+  font-weight: bold;
+}
+
+.tj_main_result{
+  font-size: 20px;
+  margin: 30px;
+  height: 200px;
+}
+
+.tj_main_result_img{
+  float: left;
+  height: 180px;
+  width: 180px;
+}
+
+.tj_main_result a{
+  color: #5B5B5B;
+  text-decoration: none;
+}
+
+ul.tj_same_products {
+  list-style-type: none;
+}
+
+.tj_main_result_img img{
+  max-height: 180px;
+}
+
+.tj_main_result_price{
+  padding-left: 200px;
+}
+
+div.taojet_search_box .tj_img_search_cat_link{
+  border-bottom: none;
+}
+
+div.taojet_search_box a.tj_img_search_cat_link{
+  width: 140px;
+  text-align: center;
+  color: rgb(102, 102, 102);
+  line-height: 34px;
+  box-shadow: inset 0px 1px 0px white;
+  text-shadow: 0px 1px 0px white;
+  border: 1px solid rgb(210, 210, 210);
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+div.taojet_search_box a.tj_img_search_cat_link:hover{
+  color: rgb(116, 184, 7);
+}
+
+div.taojet_search_box a.tj_img_search_cat_link.active{
+  color: rgb(137, 196, 3);
+}
+
+div.taojet_search_box a.taojet_image_category{
+  margin-right: 10px;
+}
+
+div.taojet_search_box a.taojet_image_category:hover{
+  color: rgb(116, 184, 7);
+}
+
+.tj_rigth_panel{
+  min-height: 220px;
+}
